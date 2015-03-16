@@ -17,3 +17,7 @@
 body {
   font-family: 'Dosis', sans-serif;
 }
+
+li {
+  list-style: none;
+}

@@ -3,7 +3,4 @@ class Task < ActiveRecord::Base
 
   validates :description, :presence => true
 
-  scope(:done, -> do
-    where({:done => false})
-  end)
 end

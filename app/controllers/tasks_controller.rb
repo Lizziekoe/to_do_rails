@@ -38,6 +38,15 @@ class TasksController < ApplicationController
     redirect_to list_path(@task.list)
   end
 
+  def complete
+    params[:tasks_checkbox].each do |check|
+       task_id = check
+       @task = Task.find_by_id(task_id)
+       @task.update_attribute(:done, true)
+     end
+     redirect_to list_path(@task.list)
+ end
+
 private
   def task_params
     params.require(:task).permit(:description)
