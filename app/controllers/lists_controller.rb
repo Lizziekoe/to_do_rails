@@ -8,4 +8,9 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
     render :show
   end
+
+  def new
+    @list = List.new
+    render :new
+  end
 end
